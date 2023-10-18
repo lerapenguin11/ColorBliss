@@ -18,13 +18,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
+    <com.example.colorbliss.custom.GradientTextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Color Bliss"
         android:fontFamily="@font/jost_bold_italic"
-        android:textColor="@color/color1"
         android:textSize="35sp"
         android:elevation="10dp"
         android:layout_marginTop="50dp"

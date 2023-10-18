@@ -28,7 +28,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
+    <com.example.colorbliss.custom.GradientTextView
         android:id="@+id/textView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -36,7 +36,6 @@
         android:fontFamily="@font/jost_bold_italic"
         android:gravity="center_horizontal"
         android:text="Discover the world of colors and relax with our mobile app Color Bliss: Anti-Stress Coloring"
-        android:textColor="@color/color1"
         android:textSize="25sp"
         android:layout_marginTop="25dp"
         android:layout_marginStart="15dp"
