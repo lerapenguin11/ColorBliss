@@ -1,4 +1,4 @@
-package com.example.colorbliss
+package com.example.colorbliss.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
