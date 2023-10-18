@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:background="@color/white"
     tools:context=".presentation.ColoringFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -31,14 +32,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
+        android:layout_gravity="center"
         android:layout_marginBottom="60dp"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="60dp">
 
         <ImageView
             android:id="@+id/coringImage"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/ic1"
+            tools:src="@drawable/ic1"
             android:scaleType="fitXY"/>
     </RelativeLayout>
 

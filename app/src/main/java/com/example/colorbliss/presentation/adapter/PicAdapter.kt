@@ -7,9 +7,12 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.colorbliss.R
+import com.example.colorbliss.presentation.adapter.listener.PicListener
 import com.example.domain.entities.Picture
 
-class PicAdapter() : RecyclerView.Adapter<PicAdapter.PicViewHolder>() {
+class PicAdapter(
+    private val listener : PicListener
+) : RecyclerView.Adapter<PicAdapter.PicViewHolder>() {
     private val picList = mutableListOf<Picture>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PicViewHolder {
@@ -23,6 +26,8 @@ class PicAdapter() : RecyclerView.Adapter<PicAdapter.PicViewHolder>() {
     override fun onBindViewHolder(holder: PicViewHolder, position: Int) {
         val pic : Picture = picList[position]
         holder.icon.setImageResource(pic.picture)
+
+        holder.itemView.setOnClickListener { listener.getPicListener(pic) }
     }
 
     @SuppressLint("NotifyDataSetChanged")
