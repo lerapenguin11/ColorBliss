@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
 import com.example.colorbliss.databinding.ActivityMainBinding
+import com.example.colorbliss.presentation.HomeFragment
 import com.example.colorbliss.utilits.APP_ACTIVITY
+import com.example.colorbliss.utilits.replaceFragmentMain
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -17,5 +19,6 @@ class MainActivity : AppCompatActivity() {
         getWindow().setFlags(
             WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
             WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+        replaceFragmentMain(HomeFragment())
     }
 }
