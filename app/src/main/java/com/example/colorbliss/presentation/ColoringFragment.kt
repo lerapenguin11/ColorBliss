@@ -129,10 +129,13 @@ class ColoringFragment(
                 MotionEvent.ACTION_DOWN -> {
                     p1.x = x.toInt()
                     p1.y = y.toInt()
-                    val sourceColor = mBitmap.getPixel(x.toInt(), y.toInt())
-                    val targetColor = paint!!.color
-                    TheTask(mBitmap, p1, sourceColor, targetColor).execute()
-                    invalidate()
+
+                    if (y < mBitmap.height){
+                        val sourceColor = mBitmap.getPixel(x.toInt(), y.toInt())
+                        val targetColor = paint!!.color
+                        TheTask(mBitmap, p1, sourceColor, targetColor).execute()
+                        invalidate()
+                    }
                 }
             }
             return true
